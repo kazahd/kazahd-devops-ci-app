@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-LABEL org.opencontainers.image.source="https://github.com/kazahd/devops-ci-app"
+LABEL org.opencontainers.image.source="https://github.com/kazahd/kazahd-devops-ci-app"
 LABEL org.opencontainers.image.description="DevOps CI sample application"
 RUN useradd --system --no-create-home app
 WORKDIR /app
