@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-LABEL org.opencontainers.image.source="https://github.com/kazahd/devops-ci-app"
+LABEL org.opencontainers.image.source="https://github.com/kazahd/kazahd-devops-ci-app"
 LABEL org.opencontainers.image.description="DevOps CI sample application"
 RUN useradd --system --no-create-home app
 WORKDIR /app
@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ ./app/
 USER app
 EXPOSE 5000
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--access-logfile", "-", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--access-logfile", "-", "app.app:app"]
